@@ -72,4 +72,10 @@ populating the count of the medals in category (Gold, Silver, and Bronze), which
 <pre><code>select * from table 
    pivot ( 3 for 1 in (2, 2, 2) );
 </code></pre>
+<p>So to create the final medal table from the raw data, we need to plug in:</p>
+<ol>
+<li>We want the medals to become columns. So this is medal.</li>
+<li>The values defining the columns are Gold, Silver and Bronze</li>
+<li>We need how many rows there are for each colour of medal. i.e. a count(*)</li>
+</ol>
 
