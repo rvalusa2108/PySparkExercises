@@ -3,9 +3,6 @@
 
 ---
 
-<blockquote>
-<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
-</blockquote>
 <h1 id="pyspark-pivot-unpivot-exercise">Pyspark Pivot Unpivot Exercise</h1>
 <p>In this exercise we will work on the example of Pivoting and Unpivoting the data using PySpark.<br>
 In this example we will be using the olympic_medal_winners_2016.csv dataset.</p>
