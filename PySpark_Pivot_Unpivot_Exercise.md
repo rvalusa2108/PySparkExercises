@@ -88,11 +88,11 @@ sparkSess = SparkSession.builder.master('local[4]').appName('SparkPivotUnpivot')
 <p>Define the schema for the data set to be loaded into a PySpark dataframe using StructType and StructField classes.</p>
 <pre><code>\# Defining the data schema structure  
 schema = StructType([StructField('OlympicYear', IntegerType(), False),  
-                     StructField('Sport', StringType(), False), 
-                     StructField('Gender', StringType(), False),  
-                     StructField('Event', StringType(), False), 
-                     StructField('Medal', StringType(), False),  
-				     StructField('NOC', StringType(), False),  
+				     StructField('Sport', StringType(), False), 
+				     StructField('Gender', StringType(), False),  
+					 StructField('Event', StringType(), False), 
+				     StructField('Medal', StringType(), False),  
+					 StructField('NOC', StringType(), False),  
 				     StructField('Athlete', StringType(), False)])
 				     
 \# Create the Spark Dataframe  
