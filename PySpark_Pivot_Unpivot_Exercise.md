@@ -92,7 +92,7 @@ schema = StructType([StructField('OlympicYear', IntegerType(), False),
 				     StructField('Gender', StringType(), False),  
 				     StructField('Event', StringType(), False), 
 				     StructField('Medal', StringType(), False),  
-					 StructField('NOC', StringType(), False),  
+				     StructField('NOC', StringType(), False),  
 				     StructField('Athlete', StringType(), False)])
 				     
 \# Create the Spark Dataframe  
