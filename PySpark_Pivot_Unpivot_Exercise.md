@@ -82,7 +82,7 @@ populating the count of the medals in category (Gold, Silver, and Bronze), which
 <pre><code>from pyspark.sql import SparkSession
 from pyspark.sql.types import StructField, StructType, StringType, IntegerType
 
-\#Creating the Spark Session
+\# Creating the Spark Session
 sparkSess = SparkSession.builder.master('local[4]').appName('SparkPivotUnpivot').getOrCreate()
 </code></pre>
 
