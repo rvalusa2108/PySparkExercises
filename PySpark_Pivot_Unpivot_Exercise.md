@@ -96,9 +96,9 @@ schema = StructType([StructField('OlympicYear', IntegerType(), False),
 				     StructField('Athlete', StringType(), False)])
 				     
 \# Create the Spark Dataframe  
-olympicMedalWinnersDF = sparkSess.read.format('csv').\  
-								     option('header', True).\  
-									 schema(schema).\
-								     load(r'E:\MyLearning\DataScience\GitHub\PySparkExercises\data\olympic_medal_winners_2016.csv')
+olympicMedalWinnersDF = sparkSess.read.format('csv').\
+								    option('header', True).\
+								    schema(schema).\
+								    load(r'E:\MyLearning\DataScience\GitHub\PySparkExercises\data\olympic_medal_winners_2016.csv')
 </code></pre>
 
