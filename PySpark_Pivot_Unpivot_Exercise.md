@@ -78,4 +78,11 @@ populating the count of the medals in category (Gold, Silver, and Bronze), which
 <li>The values defining the columns are Gold, Silver and Bronze</li>
 <li>We need how many rows there are for each colour of medal. i.e. a count(*)</li>
 </ol>
+<p>So now lets get the data loaded into a pyspark dataframe by importing the required libraries. modules, datatypes, and functions</p>
+<pre><code>from pyspark.sql import SparkSession
+from pyspark.sql.types import StructField, StructType, StringType, IntegerType
+
+# Creating the Spark Session
+sparkSess = SparkSession.builder.master('local[4]').appName('SparkPivotUnpivot').getOrCreate()
+</code></pre>
 
