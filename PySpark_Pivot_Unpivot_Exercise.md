@@ -84,7 +84,7 @@ from pyspark.sql.types import StructField, StructType, StringType, IntegerType
 # Creating the Spark Session
 sparkSess = SparkSession.builder.master('local[4]').appName('SparkPivotUnpivot').getOrCreate()
 </code></pre>
-<p>Define the schema for the data set to be loaded into a PySpark dataframe using StructType and StructField classes.</p>
+<p>Define the schema for the data set to be loaded into a PySpark dataframe using StructType and StructField classes and create the dataframe.</p>
 <pre><code># Defining the data schema structure
 schema = StructType([StructField('OlympicYear', IntegerType(), False),
   StructField('Sport', StringType(), False),
@@ -98,5 +98,16 @@ olympicMedalWinnersDF = sparkSess.read.format('csv').\
 option('header', True).\
 schema(schema).\
 load(r'E:\MyLearning\DataScience\GitHub\PySparkExercises\data\olympic_medal_winners_2016.csv')
+</code></pre>
+<p>Print the dataframe schema</p>
+<pre><code>olympicMedalWinnersDF.printSchema()
+root
+ |-- OlympicYear: integer (nullable = true)
+ |-- Sport: string (nullable = true)
+ |-- Gender: string (nullable = true)
+ |-- Event: string (nullable = true)
+ |-- Medal: string (nullable = true)
+ |-- NOC: string (nullable = true)
+ |-- Athlete: string (nullable = true)
 </code></pre>
 
