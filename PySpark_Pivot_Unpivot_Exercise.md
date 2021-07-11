@@ -110,4 +110,7 @@ root
  |-- NOC: string (nullable = true)
  |-- Athlete: string (nullable = true)
 </code></pre>
+<p>Create the TempView on the Dataframe which we can leverage to write the Pivot Sql using PySpark.sql class</p>
+<pre><code>olympicMedalWinnersDF.createOrReplaceTempView('olympicMedalWinnersTbl')
+</code></pre>
 
