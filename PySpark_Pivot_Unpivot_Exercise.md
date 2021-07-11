@@ -6,14 +6,14 @@
 <h1 id="pyspark-pivot-unpivot-exercise">Pyspark Pivot Unpivot Exercise</h1>
 <p>In this exercise we will work on the example of Pivoting and Unpivoting the data using PySpark.<br>
 In this example we will be using the olympic_medal_winners_2016.csv dataset.</p>
-<p><strong>Sample Data:</strong><br>
-OLYMPIC_YEAR,SPORT,GENDER,EVENT,MEDAL,NOC,ATHLETE<br>
-2016,Archery,M,Men’s Individual,Gold,KOR,KU Bonchan<br>
+<blockquote>
+<p><strong>Sample Data:</strong> OLYMPIC_YEAR,SPORT,GENDER,EVENT,MEDAL,NOC,ATHLETE   2016,Archery,M,Men’s Individual,Gold,KOR,KU Bonchan<br>
 2016,Archery,M,Men’s Individual,Silver,FRA,VALLADONT Jean-Charles<br>
 2016,Archery,M,Men’s Individual,Bronze,USA,ELLISON Brady<br>
 2016,Archery,W,Women’s Individual,Gold,KOR,CHANG Hyejin<br>
 2016,Archery,W,Women’s Individual,Silver,GER,UNRUH Lisa<br>
 2016,Archery,W,Women’s Individual,Bronze,KOR,KI Bobae</p>
+</blockquote>
 <p><strong>Note:</strong> NOC is the country nominating the Athletes.</p>
 <p>From the data above, we will try to find how each country fared overall. To get this we need to convert the table above to the final medal table as below</p>
 
