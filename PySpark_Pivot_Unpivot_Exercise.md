@@ -113,4 +113,11 @@ root
 <p>Create the TempView on the Dataframe which we can leverage to write the Pivot Sql using PySpark.sql class</p>
 <pre><code>olympicMedalWinnersDF.createOrReplaceTempView('olympicMedalWinnersTbl')
 </code></pre>
+<p>Based on the syntax mentioned earlier the pivot sql query to list the count of the medals won by each NOC will be as below, in which the 3 new columns will be added based on the items presents in “Medal” column of the dataframe temp view.</p>
+<pre><code>medalPivotDf = sparkSess.sql('''  
+SELECT * FROM olympicMedalWinnersTbl
+    PIVOT ( count(1) FOR Medal IN ('Gold' GOLD, 'Silver' SILVER, 'Bronze' BRONZE) )
+    ORDER BY NOC LIMIT 10 
+ ''')
+</code></pre>
 
