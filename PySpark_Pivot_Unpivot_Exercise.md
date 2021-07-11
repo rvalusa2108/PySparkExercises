@@ -69,9 +69,11 @@ populating the count of the medals in category (Gold, Silver, and Bronze), which
 <li>What to show in the new columns</li>
 </ol>
 <p>The value in the new columns must be an aggregate. For example, count, sum, min, etc. Place a pivot clause containing these items after the table name, like so:</p>
+<blockquote>
 <pre><code>select * from table 
    pivot ( 3 for 1 in (2, 2, 2) );
 </code></pre>
+</blockquote>
 <p>So to create the final medal table from the raw data, we need to plug in:</p>
 <ol>
 <li>We want the medals to become columns. So this is medal.</li>
@@ -79,12 +81,15 @@ populating the count of the medals in category (Gold, Silver, and Bronze), which
 <li>We need how many rows there are for each colour of medal. i.e. a count(*)</li>
 </ol>
 <p>So now lets get the data loaded into a pyspark dataframe by importing the required libraries. modules, datatypes, and functions</p>
+<blockquote>
 <pre><code>from pyspark.sql import SparkSession
 from pyspark.sql.types import StructField, StructType, StringType, IntegerType
 # Creating the Spark Session
 sparkSess = SparkSession.builder.master('local[4]').appName('SparkPivotUnpivot').getOrCreate()
 </code></pre>
+</blockquote>
 <p>Define the schema for the data set to be loaded into a PySpark dataframe using StructType and StructField classes and create the dataframe.</p>
+<blockquote>
 <pre><code># Defining the data schema structure
 schema = StructType([StructField('OlympicYear', IntegerType(), False),
   StructField('Sport', StringType(), False),
@@ -99,7 +104,9 @@ option('header', True).\
 schema(schema).\
 load(r'E:\MyLearning\DataScience\GitHub\PySparkExercises\data\olympic_medal_winners_2016.csv')
 </code></pre>
+</blockquote>
 <p>Print the dataframe schema</p>
+<blockquote>
 <pre><code>olympicMedalWinnersDF.printSchema()
 root
  |-- OlympicYear: integer (nullable = true)
@@ -110,9 +117,11 @@ root
  |-- NOC: string (nullable = true)
  |-- Athlete: string (nullable = true)
 </code></pre>
+</blockquote>
 <p>Create the TempView on the Dataframe which we can leverage to write the Pivot Sql using PySpark.sql class</p>
-<pre><code>olympicMedalWinnersDF.createOrReplaceTempView('olympicMedalWinnersTbl')
-</code></pre>
+<blockquote>
+<p>olympicMedalWinnersDF.createOrReplaceTempView(‘olympicMedalWinnersTbl’)</p>
+</blockquote>
 <p>Based on the syntax mentioned earlier the pivot sql query to list the count of the medals won by each NOC will be as below, in which the 3 new columns will be added based on the items presents in “Medal” column of the dataframe temp view.</p>
 <blockquote>
 <pre><code>medalPivotDf = sparkSess.sql('''  
