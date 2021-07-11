@@ -119,5 +119,30 @@ SELECT * FROM olympicMedalWinnersTbl
     PIVOT ( count(1) FOR Medal IN ('Gold' GOLD, 'Silver' SILVER, 'Bronze' BRONZE) )
     ORDER BY NOC LIMIT 10 
  ''')
+
+medalPivotDf.show()
+Python 3.8.6 | packaged by conda-forge | (default, Dec 26 2020, 04:30:06) [MSC v.1916 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.19.0 -- An enhanced Interactive Python. Type '?' for help.
+PyDev console: using IPython 7.19.0
+21/07/11 20:24:21 WARN CSVHeaderChecker: CSV header does not conform to the schema.
+ Header: OLYMPIC_YEAR, SPORT, GENDER, EVENT, MEDAL, NOC, ATHLETE
+ Schema: OlympicYear, Sport, Gender, Event, Medal, NOC, Athlete
+Expected: OlympicYear but found: OLYMPIC_YEAR
+CSV file: file:///E:/MyLearning/DataScience/GitHub/PySparkExercises/data/olympic_medal_winners_2016.csv
++-----------+-------------+------+--------------------+---+--------------------+----+------+------+
+|OlympicYear|        Sport|Gender|               Event|NOC|             Athlete|GOLD|SILVER|BRONZE|
++-----------+-------------+------+--------------------+---+--------------------+----+------+------+
+|       2016|    Athletics|     M|         Men's 1500m|ALG|   MAKHLOUFI Taoufik|null|     1|  null|
+|       2016|    Athletics|     M|          Men's 800m|ALG|   MAKHLOUFI Taoufik|null|     1|  null|
+|       2016|      Sailing|     X|      Nacra 17 Mixed|ARG|     Carranza Saroli|   1|  null|  null|
+|       2016|         Judo|     W|        Women -48 kg|ARG|        PARETO Paula|   1|  null|  null|
+|       2016|       Hockey|     M|                 Men|ARG|           Argentina|   1|  null|  null|
+|       2016|      Sailing|     X|      Nacra 17 Mixed|ARG|               Lange|   1|  null|  null|
+|       2016|       Tennis|     M|       Men's Singles|ARG|DEL POTRO Juan Ma...|null|     1|  null|
+|       2016|    Wrestling|     M|Men's Greco-Roman...|ARM|   ARUTYUNYAN Migran|null|     1|  null|
+|       2016|Weightlifting|     M|        Men's +105kg|ARM|        MINASYAN Gor|null|     1|  null|
+|       2016|Weightlifting|     M|         Men's 105kg|ARM|   MARTIROSYAN Simon|null|     1|  null|
++-----------+-------------+------+--------------------+---+--------------------+----+------+------+
 </code></pre>
 
