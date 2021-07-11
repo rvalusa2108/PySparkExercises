@@ -120,8 +120,10 @@ SELECT * FROM olympicMedalWinnersTbl
     PIVOT ( count(1) FOR Medal IN ('Gold' GOLD, 'Silver' SILVER, 'Bronze' BRONZE) )
     ORDER BY NOC LIMIT 10 
  ''')
- 
-medalPivotDf.show()
+</code></pre>
+</blockquote>
+<blockquote>
+<pre><code>medalPivotDf.show()
 Python 3.8.6 | packaged by conda-forge | (default, Dec 26 2020, 04:30:06) [MSC v.1916 64 bit (AMD64)]
 Type 'copyright', 'credits' or 'license' for more information
 IPython 7.19.0 -- An enhanced Interactive Python. Type '?' for help.
