@@ -62,12 +62,12 @@ OLYMPIC_YEAR,SPORT,GENDER,EVENT,MEDAL,NOC,ATHLETE<br>
 This can be done by transforming the MEDAL column data into Rows and<br>
 populating the count of the medals in category (Gold, Silver, and Bronze), which can be achieved by using the PIVOT clause in PySpark SQL switching rows to columns.</p>
 <p><a href="https://spark.apache.org/docs/latest/sql-ref-syntax-qry-select-pivot.html">PySpark - Pivot</a></p>
-<p>To use this you need three things:</p>
-<ol>
-<li>The column that has the values defining the new columns</li>
-<li>What these defining values are</li>
-<li>What to show in the new columns</li>
-</ol>
+<pre><code>To use this you need three things:
+1.  The column that has the values defining the new columns
+
+3.  What these defining values are
+4.  What to show in the new columns
+</code></pre>
 <p>The value in the new columns must be an aggregate. For example, count, sum, min, etc. Place a pivot clause containing these items after the table name, like so:</p>
 <pre><code>select * from table 
    pivot ( 3 for 1 in (2, 2, 2) );
