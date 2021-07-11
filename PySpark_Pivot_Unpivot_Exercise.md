@@ -81,7 +81,6 @@ populating the count of the medals in category (Gold, Silver, and Bronze), which
 <p>So now lets get the data loaded into a pyspark dataframe by importing the required libraries. modules, datatypes, and functions</p>
 <pre><code>from pyspark.sql import SparkSession
 from pyspark.sql.types import StructField, StructType, StringType, IntegerType
-
 \# Creating the Spark Session
 sparkSess = SparkSession.builder.master('local[4]').appName('SparkPivotUnpivot').getOrCreate()
 </code></pre>
