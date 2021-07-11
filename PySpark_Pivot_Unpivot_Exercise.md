@@ -95,7 +95,7 @@ sparkSess = SparkSession.builder.master('local[4]').appName('SparkPivotUnpivot')
       StructField('NOC', StringType(), False),
       StructField('Athlete', StringType(), False)])
       
-    \# Create the Spark Dataframe
+    # Create the Spark Dataframe
     olympicMedalWinnersDF = sparkSess.read.format('csv').\
     option('header', True).\
     schema(schema).\
