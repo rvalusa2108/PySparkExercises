@@ -173,4 +173,22 @@ SELECT * FROM (
    ''')
 </code></pre>
 </blockquote>
+<blockquote>
+<pre><code>countryMedalsPivotDf.show()
++---+----+------+------+
+|NOC|GOLD|SILVER|BRONZE|
++---+----+------+------+
+|ALG|null|     2|  null|
+|ARG|   4|     1|  null|
+|ARM|   1|     3|  null|
+|AUS|   8|    14|    12|
+|AUT|null|  null|     2|
+|AZE|   1|     7|    10|
+|BAH|   1|  null|     1|
+|BDI|null|     1|  null|
+|BEL|   2|     2|     2|
+|BLR|   1|     4|     4|
++---+----+------+------+
+</code></pre>
+</blockquote>
 
