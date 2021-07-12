@@ -17,6 +17,7 @@ OLYMPIC_YEAR,SPORT,GENDER,EVENT,MEDAL,NOC,ATHLETE<br>
 2016,Archery,W,Women’s Individual,Bronze,KOR,KI Bobae</p>
 </blockquote>
 <p><strong>Note:</strong> NOC is the country nominating the Athletes.</p>
+<h2 id="pivot">Pivot</h2>
 <p>From the data above, we will try to find how each country fared overall. To get this we need to convert the table above to the final medal table as below</p>
 
 <table>
