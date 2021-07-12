@@ -162,10 +162,10 @@ CSV file: file:///E:/MyLearning/DataScience/GitHub/PySparkExercises/data/olympic
 </blockquote>
 <p>The above result gives the results per athlete, that’s because the implicit group by is applied for all columns not in the pivot clause (i,e., group by applied on columns - OlympicYear, Sport, Gender, Event, NOC, Athlete).</p>
 <p>To avoid this, we need to write the inline view that selects just the columns we want in the results i.e., country(NOC) and medal.</p>
-<pre><code>&gt; countryMedalsPivotDf = sparkSess.sql('''   SELECT * FROM ( SELECT NOC,
-&gt; Medal FROM olympicMedalWinnersTbl ) PIVOT ( count(1) FOR Medal IN
-&gt; ('Gold' GOLD, 'Silver' SILVER, 'Bronze' BRONZE) )   
-ORDER BY NOC
-&gt; LIMIT 10''')
-</code></pre>
+<blockquote>
+<p>countryMedalsPivotDf = sparkSess.sql(’’’   SELECT * FROM ( SELECT NOC,<br>
+Medal FROM olympicMedalWinnersTbl ) PIVOT ( count(1) FOR Medal IN<br>
+(‘Gold’ GOLD, ‘Silver’ SILVER, ‘Bronze’ BRONZE) )    ORDER BY NOC<br>
+LIMIT 10’’’)</p>
+</blockquote>
 
