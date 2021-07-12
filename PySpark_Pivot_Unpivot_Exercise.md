@@ -165,8 +165,8 @@ CSV file: file:///E:/MyLearning/DataScience/GitHub/PySparkExercises/data/olympic
 <blockquote>
 <pre><code>countryMedalsPivotDf = sparkSess.sql('''  
 SELECT * FROM ( 
-SELECT NOC, Medal FROM olympicMedalWinnersTbl 
-) 
+   SELECT NOC, Medal FROM olympicMedalWinnersTbl 
+   ) 
    PIVOT ( count(1) FOR Medal IN ('Gold' GOLD, 'Silver' SILVER, 'Bronze' BRONZE) )  
    ORDER BY NOC 
    LIMIT 10
