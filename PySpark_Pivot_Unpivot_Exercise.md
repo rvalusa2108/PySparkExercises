@@ -19,49 +19,17 @@ OLYMPIC_YEAR,SPORT,GENDER,EVENT,MEDAL,NOC,ATHLETE<br>
 <p><strong>Note:</strong> NOC is the country nominating the Athletes.</p>
 <h2 id="pivot">Pivot</h2>
 <p>From the data above, we will try to find how each country fared overall. To get this we need to convert the table above to the final medal table as below</p>
-
-<table>
-<thead>
-<tr>
-<th>Country</th>
-<th>Gold</th>
-<th>Silver</th>
-<th>Bronze</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>United States</td>
-<td>46</td>
-<td>37</td>
-<td>38</td>
-</tr>
-<tr>
-<td>Great Britain</td>
-<td>27</td>
-<td>23</td>
-<td>17</td>
-</tr>
-<tr>
-<td>China</td>
-<td>26</td>
-<td>18</td>
-<td>26</td>
-</tr>
-<tr>
-<td>Russia</td>
-<td>19</td>
-<td>18</td>
-<td>19</td>
-</tr>
-<tr>
-<td>Germany</td>
-<td>17</td>
-<td>10</td>
-<td>15</td>
-</tr>
-</tbody>
-</table><p>To do this, we need to count the number of gold, silver and bronze rows for each country. Then create new columns to hold the results.<br>
+<blockquote>
+<pre><code>| Country       | Gold | Silver | Bronze |
+|---------------|------|--------|--------|
+| United States | 46   | 37     | 38     |
+| Great Britain | 27   | 23     | 17     |
+| China         | 26   | 18     | 26     |
+| Russia        | 19   | 18     | 19     |
+| Germany       | 17   | 10     | 15     |
+</code></pre>
+</blockquote>
+<p>To do this, we need to count the number of gold, silver and bronze rows for each country. Then create new columns to hold the results.<br>
 This can be done by transforming the MEDAL column data into Rows and<br>
 populating the count of the medals in category (Gold, Silver, and Bronze), which can be achieved by using the PIVOT clause in PySpark SQL switching rows to columns.</p>
 <p><a href="https://spark.apache.org/docs/latest/sql-ref-syntax-qry-select-pivot.html">PySpark - Pivot</a></p>
